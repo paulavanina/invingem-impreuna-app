@@ -3,22 +3,22 @@ import classes from './FeaturesImages.module.css';
 
 const data = [
   {
-    image: 'auditors',
+    id:1,
     title: 'Titlu',
     description: 'Descriere',
   },
   {
-    image: '',
+    id:2,
     title: 'Titlu',
     description: 'Descriere',
   },
   {
-    image: '',
+    id:3,
     title: 'Titlu',
     description: 'Descriere',
   },
   {
-    image: '',
+    id:4,
     title: 'Titlu',
     description: 'Descriere',
   },
@@ -26,7 +26,7 @@ const data = [
 
 export function FeaturesImages() {
   const items = data.map((item) => (
-    <div className={classes.item} key={item.image}>
+    <div className={classes.item} key={item.id}>
       <ThemeIcon variant="light" className={classes.itemIcon} size={60} radius="md">
       </ThemeIcon>
 
