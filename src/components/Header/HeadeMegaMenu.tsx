@@ -1,5 +1,5 @@
 import {Group, Button, Box, Burger, Drawer,} from '@mantine/core';
-import Logo from '../../assets/logo-placeholder.png'
+import Logo from '../../assets/Untitled design (2).png'
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
 import { Link } from 'react-router-dom';

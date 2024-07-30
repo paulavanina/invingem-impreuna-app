@@ -1,33 +1,41 @@
 import {  Text, Container, ThemeIcon, Title, SimpleGrid } from '@mantine/core';
 import classes from './FeaturesImages.module.css';
-
+import bookIcon from '../../assets/books-icon.png';
+import heartIcon from '../../assets/heart-icon.png'
+import messageIcon from '../../assets/message-icon.png'
+import webinareIcon from '../../assets/webinar-icon.png'
 const data = [
   {
     id:1,
-    title: 'Titlu',
-    description: 'Descriere',
+    image: bookIcon,
+    title: 'Resurse',
+    description: 'Oferim acces la o gamă variată de resurse utile si informative pentru a te ajuta să înțelegi și să gestionezi mai bine lupta împotriva cancerului.',
   },
   {
     id:2,
-    title: 'Titlu',
-    description: 'Descriere',
+    image: heartIcon,
+    title: 'Comunitate de Suport',
+    description: 'Împărtășește-ți povestea despre cum lupți cu cancerul pentru a deveni o sursă de speranță și inspirație pentru alții.',
   },
   {
     id:3,
-    title: 'Titlu',
-    description: 'Descriere',
+    image: messageIcon,
+    title: 'Împărtășește-ți povestea',
+    description: 'Împărtășește-ți povestea despre cum lupți cu cancerul pentru a deveni o sursă de speranță și inspirație pentru alții.',
   },
   {
     id:4,
-    title: 'Titlu',
-    description: 'Descriere',
+    image:webinareIcon,
+    title: 'Participă la Evenimente și Webinarii',
+    description: 'Participă la evenimente și webinarii pentru a obține informații actualizate și a interacționa cu alții care se confruntă cu provocări similare.',
   },
 ];
 
 export function FeaturesImages() {
   const items = data.map((item) => (
     <div className={classes.item} key={item.id}>
-      <ThemeIcon variant="light" className={classes.itemIcon} size={60} radius="md">
+      <ThemeIcon variant="light" className={classes.itemIcon} size={60} radius="md" >
+        <img src={item.image} className={classes.iconImage}/>
       </ThemeIcon>
 
       <div>
@@ -42,12 +50,12 @@ export function FeaturesImages() {
   return (
     <Container size={700} className={classes.wrapper}>
       <Title className={classes.title} order={2}>
-       Features<span className={classes.highlight}></span> 
+       Explorează <span className={classes.highlight}> Împreună Învigem</span> 
       </Title>
 
       <Container size={660} p={0}>
         <Text c="dimmed" className={classes.description}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ducimus hic quae, eius reiciendis unde illum totam, autem numquam eos non officiis eveniet quas enim quidem consequatur velit animi quod!
+        Cancerul poate fi o perioadă extrem de dificilă, dar nu trebuie să treci prin ea singur. Alătură-te pentru a găsi conexiuni valoroase și inspirație în această călătorie.
         </Text>
       </Container>
 

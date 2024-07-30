@@ -1,6 +1,6 @@
 import { Text, Container } from '@mantine/core';
 import classes from './FooterLinks.module.css';
-import Logo from '../../assets/logo-placeholder.png'
+import Logo from '../../assets/Untitled design (2).png'
 const data = [
   {
    title:'', 
@@ -40,7 +40,7 @@ export function FooterLinks() {
         <div className={classes.logo}>
         <img src={Logo} style={{width:'150px', height: 'auto'}} />
           <Text size="xs" c="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
+          O comunitate online pentru toate varstele care se confrunta cu cancerul.
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
