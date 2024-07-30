@@ -1,5 +1,5 @@
 import {Group, Button, Box, Burger, Drawer,} from '@mantine/core';
-import Logo from '../../assets/Untitled design (2).png'
+import Logo from '../../assets/Împreună (1).png'
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
 import { Link } from 'react-router-dom';
@@ -7,7 +7,7 @@ export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
   return (
-    <Box pb={100}>
+    <Box pb={0}>
       <header className={classes.header}>
 
         <Group  justify="space-between" h="100%">

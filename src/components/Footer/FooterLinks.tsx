@@ -1,6 +1,6 @@
 import { Text, Container } from '@mantine/core';
 import classes from './FooterLinks.module.css';
-import Logo from '../../assets/Untitled design (2).png'
+import Logo from '../../assets/Împreună__1_-removebg-preview.png'
 const data = [
   {
    title:'', 

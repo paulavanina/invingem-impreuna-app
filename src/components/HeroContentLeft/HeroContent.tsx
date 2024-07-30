@@ -10,14 +10,11 @@ export function HeroContentLeft() {
         zIndex={0}
       />
       <Container className={classes.container} size="md">
-        <Title className={classes.title}> Bine ati venit la Impreuna Invingem!</Title>
-        <Text className={classes.description} size="xl" mt="xl">
+        <Title className={classes.title}>Bine ați venit la Împreună Învingem !</Title>
+        <Text className={classes.description} size="xl" mt="xl" style={{color:'white'}}>
         Suntem aici pentru a duce împreună oamenii care se confruntă cu cancerul, pentru a împărtăși experiențe, a găsi resurse utile și a oferi suport emoțional. 
         </Text>
-
-        <Button variant="gradient" size="xl" radius="xl" className={classes.control}>
-          Get started
-        </Button>
+        <Button style={{ backgroundColor: '#2f7948' }} radius="xl" size="xl" className={classes.control}>Get started</Button>
       </Container>
     </div>
   );

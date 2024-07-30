@@ -1,9 +1,8 @@
 .inner {
   display: flex;
   justify-content: space-between;
-  /* padding-top: calc(var(--mantine-spacing-xl) * 4); */
-  padding-top: 30px;
-  padding-bottom: calc(var(--mantine-spacing-xl) * 4);
+  padding-top: calc(var(--mantine-spacing-xl) * 4);
+  padding-bottom: var(--mantine-spacing-xl);
 }
 
 .content {

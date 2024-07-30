@@ -43,7 +43,7 @@
 }
 
 .highlight {
-  background-color: var(--mantine-color-blue-light);
+  background-color: #bce0c8;
   padding: rem(5px);
   padding-top: 0;
   border-radius: var(--mantine-radius-sm);

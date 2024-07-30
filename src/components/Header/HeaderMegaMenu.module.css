@@ -4,8 +4,6 @@
   padding-right: var(--mantine-spacing-md);
   border-bottom: rem(1px) solid
     light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .link {
