@@ -1,18 +1,17 @@
 import { Image, Container, Title, Button, Group, Text, List, ThemeIcon, rem } from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
 import classes from './HeroHeader.module.css'
-import headerImg from '../../assets/placeholder-img.png'
-
+import thankYou from '../../assets/thank-you.png'
 export function HeroBullets() {
   return (
     <Container size="md">
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
-            <span className={classes.highlight}> </span>  <br /> 
+          Spune-ti povestea ...
           </Title>
           <Text c="dimmed" mt="md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, numquam rem minus veniam ut fuga officia eos hic repellendus tempore assumenda! Dicta exercitationem illo dolor rem molestias iste praesentium magnam?
+          Fiecare poveste este unică și valoroasă. Ajută comunitatea să înțeleagă și să sprijine pe cei care se confruntă cu lupta împotriva cancerului.
           </Text>
 
           <List mt={30} spacing="sm" size="sm"
@@ -22,8 +21,7 @@ export function HeroBullets() {
               </ThemeIcon>
             }>
             <List.Item>
-              <b>TypeScript based</b> – build type safe applications, all components and hooks
-              export types
+              <b>Povestea ta </b>poate inspira și ajuta pe alții în aceeași situație.
             </List.Item>    
           </List>
 
@@ -33,7 +31,7 @@ export function HeroBullets() {
             </Button>
           </Group>
         </div>
-        <Image src={headerImg} className={classes.image} />
+        <Image src={thankYou} className={classes.image} />
       </div>
     </Container>
   );
