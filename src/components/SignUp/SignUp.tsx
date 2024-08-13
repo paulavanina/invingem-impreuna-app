@@ -1,20 +1,15 @@
 import { Button, Group, TextInput, MultiSelect, PasswordInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import './SignUp.css'
+import { initialValues } from './constants';
+import { validateEmail,validatePassword } from '../LogIn/validation';
 export function SignUp() {
   const form = useForm({
     mode: 'uncontrolled',
-    initialValues: {
-      nume:'',
-      prenume:'',
-      status:'',
-      email: '',
-      parola:'',
-    },
-
+    initialValues:initialValues,
     validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
-      parola: (val) => (val.length <= 6 ? 'Parola trebuie sa contina minim 6 caractere' : null),
+      email: validateEmail,
+      parola: validatePassword,
     },
   });
 
