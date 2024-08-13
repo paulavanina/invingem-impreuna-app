@@ -1,22 +1,23 @@
-import {  Text, Container, ThemeIcon, Title, SimpleGrid } from '@mantine/core';
+import {  Text, Container, Group,ThemeIcon, Title,Badge, SimpleGrid } from '@mantine/core';
 import classes from './FeaturesImages.module.css';
 import bookIcon from '../../assets/books-icon.png';
 import heartIcon from '../../assets/heart-icon.png'
 import messageIcon from '../../assets/message-icon.png'
 import webinareIcon from '../../assets/webinar-icon.png'
 const data = [
-  {
+   {
     id:1,
-    image: bookIcon,
-    title: 'Resurse',
-    description: 'Oferim acces la o gamă variată de resurse utile si informative pentru a te ajuta să înțelegi și să gestionezi mai bine lupta împotriva cancerului.',
-  },
-  {
-    id:2,
     image: heartIcon,
     title: 'Comunitate de Suport',
     description: 'Împărtășește-ți povestea despre cum lupți cu cancerul pentru a deveni o sursă de speranță și inspirație pentru alții.',
   },
+  {
+    id:2,
+    image: bookIcon,
+    title: 'Testimoniale',
+    description: 'Citește mărturii și povești de succes de la oameni care au învins sau care se află în lupta cu cancerul.',
+  },
+ 
   {
     id:3,
     image: messageIcon,
@@ -34,7 +35,7 @@ const data = [
 export function FeaturesImages() {
   const items = data.map((item) => (
     <div className={classes.item} key={item.id}>
-      <ThemeIcon variant="light" className={classes.itemIcon} size={60} radius="md" >
+      <ThemeIcon  style={{ backgroundColor: "white" }}  className={classes.itemIcon} size={60} radius="md" >
         <img src={item.image} className={classes.iconImage}/>
       </ThemeIcon>
 
@@ -49,11 +50,18 @@ export function FeaturesImages() {
 
   return (
     <Container size={700} className={classes.wrapper}>
+      <Group justify="center" pb={20} >
+        <Badge variant="filled" size="lg" color='#9a5576'>
+         SPRINJIN ȘI INFORMAȚII
+        </Badge>
+      </Group>
+
       <Title className={classes.title} order={2}>
-       Explorează <span className={classes.highlight}> Împreună Învigem</span> 
+       Explorează  Împreună Învigem
       </Title>
 
-      <Container size={660} p={0}>
+      
+      <Container size={660} p={1}>
         <Text c="dimmed" className={classes.description}>
         Cancerul poate fi o perioadă extrem de dificilă, dar nu trebuie să treci prin ea singur. Alătură-te pentru a găsi conexiuni valoroase și inspirație în această călătorie.
         </Text>

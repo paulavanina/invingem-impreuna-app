@@ -1,13 +1,17 @@
 .footer {
-  margin-top: rem(120px);
+  margin-top: rem(50px);
   padding-top: calc(var(--mantine-spacing-xl) * 2);
   padding-bottom: calc(var(--mantine-spacing-xl) * 2);
-  background-color: light-dark(
-    var(--mantine-color-gray-0),
-    var(--mantine-color-dark-6)
+  background-image: linear-gradient(
+    to right top,
+    #598c88,
+    #6f9a97,
+    #86a9a6,
+    #9cb7b5,
+    #b2c6c4
   );
-  border-top: rem(1px) solid
-    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  font-family: "Poppins";
+  color: var(--mantine-color-white, #ffffff);
 }
 
 .logo {
@@ -22,7 +26,6 @@
 
 .description {
   margin-top: rem(5px);
-
   @media (max-width: $mantine-breakpoint-sm) {
     margin-top: var(--mantine-spacing-xs);
     text-align: center;
@@ -54,7 +57,7 @@
 
 .link {
   display: block;
-  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-1));
+  color: white;
   font-size: var(--mantine-font-size-sm);
   padding-top: rem(3px);
   padding-bottom: rem(3px);
@@ -65,11 +68,8 @@
 }
 
 .title {
-  font-size: var(--mantine-font-size-lg);
-  font-weight: 700;
-  font-family: Greycliff CF, var(--mantine-font-family);
   margin-bottom: calc(var(--mantine-spacing-xs) / 2);
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  color: #ffffff;
 }
 
 .afterFooter {
@@ -91,4 +91,14 @@
   @media (max-width: $mantine-breakpoint-sm) {
     margin-top: var(--mantine-spacing-xs);
   }
+}
+
+.footer .title,
+.footer .link,
+.footer .wrapper,
+.footer .inner {
+  font-size: 18px;
+}
+.footer .description {
+  font-size: 17px;
 }

@@ -1,18 +1,19 @@
 import { Route, Routes } from "react-router-dom"
 import DespreNoi from "./pages/DespreNoi/DespreNoi"
-import Resurse from "./pages/Resurse/Resurse"
 import PovesteaMea from "./pages/PovesteaMea/PovesteaMea"
 import Comunitate from "./pages/Comunitate/Comunitate"
-
+import Inscriere from "./pages/Inscriere/Inscriere"
+import Autentificare from "./pages/Autentificare/Autentificare"
 function App() {
   return (
-   <div>    
+   <div> 
     <Routes>
       <Route path="/" element={<DespreNoi/>}/>
       <Route path="despre-noi" element={<DespreNoi/>}/>
-      <Route path="resurse" element={<Resurse/>}/>
       <Route path="povestea-mea" element={<PovesteaMea/>}/>
       <Route path="comunitate" element={<Comunitate/>}/>
+      <Route path="logIn" element={<Autentificare/>}/>
+      <Route path="signUp" element={<Inscriere/>}/>
     </Routes>
    </div>
   )

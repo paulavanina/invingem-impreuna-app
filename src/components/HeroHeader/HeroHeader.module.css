@@ -33,9 +33,8 @@
 }
 
 .image {
-  width: rem(376px);
-  height: rem(356px);
-
+  width: rem(300px);
+  height: rem(450px);
   @media (max-width: $mantine-breakpoint-md) {
     display: none;
   }
@@ -46,4 +45,7 @@
   background-color: var(--mantine-color-blue-light);
   border-radius: var(--mantine-radius-sm);
   padding: rem(4px) rem(12px);
+}
+.text {
+  color: #9a5576;
 }
