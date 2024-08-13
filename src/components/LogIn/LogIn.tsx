@@ -1,17 +1,9 @@
 import {  Button, Group, TextInput, PasswordInput} from '@mantine/core';
 import { useForm } from '@mantine/form';
 import './LogIn.css'
-import { initialValues } from './constants';
-import { validateEmail,validatePassword } from './validation';
+import { LoginValidation } from './LoginValidation';
 export function Login(){
-    const form=useForm({
-        mode:'uncontrolled',
-        initialValues :initialValues,
-        validate: {
-            email: validateEmail,
-            parola: validatePassword
-          },
-    });
+    const form=useForm(LoginValidation);
     return(
     <div className='background-container'>
          <div className='su-form-container'>
