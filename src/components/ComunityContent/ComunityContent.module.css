@@ -1,0 +1,59 @@
+.hero {
+  position: relative;
+  background-image: url("../../assets/stela.png");
+  background-size: cover;
+  background-position: center;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  padding-bottom: 50px;
+}
+
+.container {
+  height: rem(660px);
+  display: flex;
+
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    height: rem(500px);
+    padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+  }
+}
+
+.title {
+  color: black;
+  font-size: rem(60px);
+  font-weight: 900;
+
+  text-align: left;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(40px);
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: rem(28px);
+  }
+}
+
+.description {
+  color: var(--mantine-color-white);
+  max-width: rem(600px);
+  margin-left: 0;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    max-width: 100%;
+    font-size: var(--mantine-font-size-sm);
+  }
+}
+
+.control {
+  margin-top: calc(var(--mantine-spacing-xl) * 1.5);
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: 100%;
+  }
+}

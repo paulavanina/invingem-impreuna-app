@@ -1,16 +1,16 @@
-import { Text, Container } from '@mantine/core';
+import { Text, Container} from '@mantine/core';
 import classes from './FooterLinks.module.css';
-import Logo from '../../assets/logo-placeholder.png'
+import Logo from '../../assets/Împreună__5_-removebg-preview.png'
 const data = [
   {
-   title:'', 
+   title:'Link-uri utile :', 
     links: [
-      { label: 'Despre noi', link: '#' },
-      { label: 'Resurse', link: '#' },
-      { label: 'Povestea mea', link: '#' },
-      { label: 'Comunitate', link: '#' },
+      { label: 'Despre noi', link: '/despre-noi' },
+      { label: 'Povestea mea', link: 'povestea-mea' },
+      { label: 'Comunitate', link: 'comunitate' },
     ],
   },
+
 ];
 
 export function FooterLinks() {
@@ -20,9 +20,7 @@ export function FooterLinks() {
         key={index}
         className={classes.link}
         component="a"
-        href={link.link}
-        onClick={(event) => event.preventDefault()}
-      >
+        href={link.link} >
         {link.label}
       </Text>
     ));
@@ -38,16 +36,16 @@ export function FooterLinks() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-        <img src={Logo} style={{width:'150px', height: 'auto'}} />
-          <Text size="xs" c="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
+        <img src={Logo} style={{width:'200px', height: 'auto'}} />
+          <Text size="sm"  className={classes.description}>
+          O comunitate online pentru toate varstele care se confrunta cu cancerul.
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
-      <Container className={classes.afterFooter}>
-        <Text c="dimmed" size="sm">
-          © 2024 Impreuna Invingem. Toate drepturile rezervate.
+      <Container className={classes.afterFooter} >
+        <Text fz={19}>
+          © 2024 Impreuna Invingem. 
         </Text></Container>
     </footer>
   );

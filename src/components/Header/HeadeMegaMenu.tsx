@@ -1,24 +1,30 @@
 import {Group, Button, Box, Burger, Drawer,} from '@mantine/core';
-import Logo from '../../assets/logo-placeholder.png'
+import Logo from '../../assets/Împreună (4).png'
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  
+  const navigate=useNavigate();
+
+  const handleLogin=()=>{
+    navigate('/logIn');
+  }
+
+  const handleSignUp=()=>{
+    navigate('/signUp')
+  }
 
   return (
-    <Box pb={100}>
+    <Box pb={0}>
       <header className={classes.header}>
-
         <Group  justify="space-between" h="100%">
         <img src={Logo} style={{width:'150px', height: 'auto'}} />
           <Group h="100%" gap={1} visibleFrom="sm">
             <Link to="/" className={classes.link}>
               Despre noi
-            </Link>
-            <Link to="/resurse" className={classes.link}>
-              Resurse
-            </Link>
+            </Link>  
             <Link to="/povestea-mea" className={classes.link}>
               Povestea mea
             </Link>
@@ -28,8 +34,8 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group visibleFrom="sm">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
+            <Button variant="default" onClick={handleLogin}>Log in</Button>
+            <Button onClick={handleSignUp}>Sign up</Button>
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
