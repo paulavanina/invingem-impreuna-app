@@ -1,16 +1,18 @@
+
 import { HeaderMegaMenu } from '../../components/Header/HeadeMegaMenu'
 import { FooterLinks } from '../../components/Footer/FooterLinks'
+import DetaliiCont from '../../components/DetaliiCont/DetaliiCont'
 import { BlogCard } from '../../components/BlogCard/BlogCard'
 
-
-const PovesteaMea = () => {
+const ContulMeu = () => {
   return (
-    <div className='my-story'>
+    <div>
       <HeaderMegaMenu/>
-<BlogCard/>
+      <DetaliiCont/>
+   <BlogCard/>
       <FooterLinks/>
     </div>
   )
 }
 
-export default PovesteaMea
+export default ContulMeu

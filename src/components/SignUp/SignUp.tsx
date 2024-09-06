@@ -1,14 +1,48 @@
-import { Button, Group, TextInput, MultiSelect, PasswordInput } from '@mantine/core';
+import { Button, Group, TextInput, PasswordInput,Center } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import './SignUp.css'
 import { SignUpValidation } from './SignUpValidation';
+import axios from 'axios';
+import { useDisclosure } from '@mantine/hooks';
+import { Modal} from '@mantine/core';
+import welcome from '../../assets/flat-design-colorful-characters-welcoming.png'
+import { useNavigate } from 'react-router-dom';
+import xIcon from '../../assets/icons8-x.gif'
+//import { response } from 'express';
+
 export function SignUp() {
   const form = useForm(SignUpValidation);
+
+const handleSubmit=async(values:any)=>{
+  try{
+    const response=await axios.post('http://localhost:8080/signup', values);
+    console.log(response.data);
+    if (response.status===200)
+    {
+      open();
+    }
+  }catch(error:any){
+    console.error('Eroare la inregisrare', error); 
+   if(error.response&&error.response.status===400){
+    console.log("email-ul exista deja.");
+    openError();
+   }
+  }
+}
+//pop-up
+const [opened, { open, close }] = useDisclosure(false);
+const [openedError,{open: openError,close: closeError}]=useDisclosure(false);
+
+const navigate=useNavigate();
+
+const handleLogin=()=>{
+  navigate('/login');
+}
 
   return (
     <div className='background-container'>
     <div className='form-container'>
-    <form onSubmit={form.onSubmit((values) => console.log(values))}>
+    <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
       <TextInput className='form-component'
         withAsterisk
         label="Nume"
@@ -23,12 +57,7 @@ export function SignUp() {
         key={form.key('prenume')}
         {...form.getInputProps('prenume')}
       />
-      <MultiSelect className='form-component'
-      label="Status"
-      placeholder="Alege status-ul"
-      data={['Luptător împotriva cancerului', 'Supraviețuitor al cancerului','Susținător al celor afectați de cancer']}
-      searchable
-      />
+ 
       <TextInput className='form-component'
         withAsterisk
         label="Email"
@@ -43,10 +72,25 @@ export function SignUp() {
         key={form.key('parola')}
         {...form.getInputProps('parola')}
       />
-    
 
-      <Group justify="center" pr={10} pt={15}  >
-        <Button type="submit">Submit</Button>
+      <Modal opened={opened} onClose={close} >
+        <div className="modal-container">
+        <div className="modal-top"><img src={welcome} width={400}/></div>
+        <div className="modal-center">Contul tau a fost creat cu succes!</div>
+        <div className="modal-bottom"><Button type='submit' onClick={handleLogin}>Login</Button></div>
+        </div>
+      </Modal>
+
+      <Modal opened={openedError} onClose={closeError} >
+        <div className="error-modal-container">
+        <div className="error-modal-top"><Center><img src={xIcon} width={60} /></Center></div>
+        <div className="error-modal-center" >Acest email a fost utilizat! Te rugam reincearca creearea contului.</div>
+       
+        </div>
+      </Modal>
+
+      <Group justify="center" pr={10} pt={8} >
+        <Button type="submit" >Submit</Button>
       </Group>
     </form>
     </div>

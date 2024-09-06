@@ -4,6 +4,7 @@ import PovesteaMea from "./pages/PovesteaMea/PovesteaMea"
 import Comunitate from "./pages/Comunitate/Comunitate"
 import Inscriere from "./pages/Inscriere/Inscriere"
 import Autentificare from "./pages/Autentificare/Autentificare"
+import ContulMeu from "./pages/ContulMeu.tsx/ContulMeu"
 function App() {
   return (
    <div> 
@@ -14,6 +15,7 @@ function App() {
       <Route path="comunitate" element={<Comunitate/>}/>
       <Route path="logIn" element={<Autentificare/>}/>
       <Route path="signUp" element={<Inscriere/>}/>
+      <Route path="contul-meu" element={<ContulMeu/>}/>
     </Routes>
    </div>
   )
