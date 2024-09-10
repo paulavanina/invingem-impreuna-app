@@ -12,7 +12,7 @@ export function Login(){
         try{
             const response=await axios.post('http://localhost:8080/login', values);
             console.log(response.data);
-           
+            handleLogin();
         }catch(error){
             console.error("Eroare la autentificare.")
         }
@@ -20,7 +20,7 @@ export function Login(){
 
     const navigate=useNavigate();
     const handleLogin=()=>{
-        navigate('/povestea-mea');
+        navigate('/contul-meu');
     }
 
     return(
@@ -43,7 +43,7 @@ export function Login(){
                     />
                     
                     <Group justify="center" pr={10} pt={10} >
-                        <Button type="submit" className='su-form-component' onClick={handleLogin}>Submit</Button>
+                        <Button type="submit" className='su-form-component'>Submit</Button>
                     </Group>
             </form>
          </div>
