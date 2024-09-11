@@ -1,3 +1,10 @@
+
+interface Isignup{
+  nume: string;
+  prenume:string;
+  email : string;
+  parola:string;
+}
 export const SignUpValidation={
   initialValues:{
       mode: 'uncontrolled',

@@ -10,7 +10,9 @@ export function Login(){
 
     const handleSubmit=async(values:any)=>{
         try{
-            const response=await axios.post('http://localhost:8080/login', values);
+            const loginURL="http://localhost:8080/login"
+            const response=await axios.post(loginURL, values);
+            localStorage.setItem('token', response.data.token);
             console.log(response.data);
             handleLogin();
         }catch(error){
@@ -20,7 +22,7 @@ export function Login(){
 
     const navigate=useNavigate();
     const handleLogin=()=>{
-        navigate('/contul-meu');
+        navigate('/contulMeu');
     }
 
     return(

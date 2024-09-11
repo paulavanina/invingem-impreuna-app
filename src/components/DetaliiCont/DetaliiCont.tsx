@@ -4,21 +4,62 @@ import './DetaliiCont.css'
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'
 import { useForm } from '@mantine/form';
-import { Blog } from './Blog';
 import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { response } from 'express';
+interface BlogInterface{
+  titlu: string;
+  descriere: string;
+}
 export const DetaliiCont = () => {
-    const form=useForm(Blog);
+ 
+   const Blog={
+    initialValues:{
+        mode: 'uncontrolled',
+        titlu:'',
+        descriere:'',
+    },
+  }
+    const form=useForm<BlogInterface>(Blog);
 
-    const handleSubmit=async(values:any)=>{
+    const[userData, setUserData]=useState({
+      nume:'',
+      prenume:'',
+      email:'',
+    })
+
+    useEffect(()=>{
+      const token=localStorage.getItem('token');
+
+      if(!token){
+        console.error("token-ul lipseste");
+        return;
+      }
+      const config={
+        headers:{
+          Authorization:`Bearer ${token}`
+        }
+      }
+      const userProfileURL="http://localhost:8080/user-profile"
+       axios.get(userProfileURL, config)
+       .then(response=>{
+        setUserData(response.data);
+       }).catch(error=>{
+        console.error("eroare");
+       })
+    },[])
+
+
+    const handleSubmit=async(values:BlogInterface)=>{
       try{
-    const response= await axios.post("http://localhost:8080/blog", values);
+    const blogURL="http://localhost:8080/blog"
+    const response= await axios.post(blogURL, values);
     console.log(response.data);
       }catch(error){
     console.error("Eroare in inserarea datelor in bd.")
       }
     }
-
-    
+ 
   return (
     <Center>
     <div className='contul-meu'>
@@ -30,9 +71,9 @@ export const DetaliiCont = () => {
         mx="auto"
         mt={20}
       />
-      <div className="nume">Nume:</div>
-      <div className="prenume">Prenume: </div>
-      <div className='email'>Email:</div>
+      <div className="nume">Nume: {userData.nume}</div>
+      <div className="prenume">Prenume: {userData.prenume} </div>
+      <div className='email'>Email: {userData.email}</div>
     </div>
 
     {/* Blog: */}

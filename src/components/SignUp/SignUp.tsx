@@ -8,15 +8,15 @@ import { Modal} from '@mantine/core';
 import welcome from '../../assets/flat-design-colorful-characters-welcoming.png'
 import { useNavigate } from 'react-router-dom';
 import xIcon from '../../assets/icons8-x.gif'
-//import { response } from 'express';
-
+import { Isignup } from './SignUpValidation';
 export function SignUp() {
-  const form = useForm(SignUpValidation);
+  const form = useForm<Isignup>(SignUpValidation);
 
-const handleSubmit=async(values:any)=>{
+const handleSubmit=async(values:Isignup)=>{
   try{
-    const response=await axios.post('http://localhost:8080/signup', values);
-    console.log(response.data);
+    const signupURL='http://localhost:8080/signup';
+    const response=await axios.post(signupURL, values);
+    
     if (response.status===200)
     {
       open();

@@ -34,7 +34,7 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group visibleFrom="sm">
-            <Link to='/contul-meu' className={classes.link}>
+            <Link to='/contulMeu' className={classes.link}>
             Contul meu 
             </Link>
             <Button variant="default" onClick={handleLogin}>Log in</Button>

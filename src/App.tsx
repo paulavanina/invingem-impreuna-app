@@ -15,7 +15,7 @@ function App() {
       <Route path="comunitate" element={<Comunitate/>}/>
       <Route path="logIn" element={<Autentificare/>}/>
       <Route path="signUp" element={<Inscriere/>}/>
-      <Route path="contul-meu" element={<ContulMeu/>}/>
+      <Route path="contulMeu" element={<ContulMeu/>}/>
     </Routes>
    </div>
   )
