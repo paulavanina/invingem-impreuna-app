@@ -1,12 +1,12 @@
 import { Card, Image, Text, Group, Center, Avatar, Button , SimpleGrid} from '@mantine/core';
-import classes from './BlogCard.module.css'
+import classes from './CardPage.module.css';
 import avatar from '../../assets/profile-mihail.jpg';
 import healthcare from '../../assets/healthcare.avif';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { response } from 'express';
 
-export function BlogCard() {
+export function CardPage() {
   const [blogs, setBlogs] = useState([
     {
       titlu:'',
@@ -16,22 +16,10 @@ export function BlogCard() {
   ]);
 
   const fetchBlogs = async () => {
-    const token=localStorage.getItem('token');
-
-      if(!token){
-        console.error("token-ul lipseste");
-        return;
-      }
-      const config={
-        headers:{
-          Authorization:`Bearer ${token}`
-        }
-      }
-    const apiBlogs = "http://localhost:8080/blog-details";
-    axios.get(apiBlogs,config)
+    const apiBlogs = "http://localhost:8080/blogs";
+    axios.get(apiBlogs)
     .then(response=>{
       setBlogs(response.data);
-      console.log(response.data);
      }).catch(error=>{
       console.error("eroare");
      })
@@ -66,7 +54,7 @@ export function BlogCard() {
               <Center>
                 <Avatar src={avatar} size={35} radius="xl" mr="xs" />
                 <Text fz={14} inline>
-                  Nume 
+                  nume
                 </Text>
                 <Button ml={100}>Read more</Button>
               </Center>

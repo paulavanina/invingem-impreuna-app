@@ -1,5 +1,5 @@
 
-interface Isignup{
+export interface Isignup{
   nume: string;
   prenume:string;
   email : string;

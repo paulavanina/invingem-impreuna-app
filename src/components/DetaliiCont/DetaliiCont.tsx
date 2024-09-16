@@ -1,4 +1,3 @@
-
 import { Avatar, Button, TextInput, Center} from '@mantine/core'
 import './DetaliiCont.css'
 import ReactQuill from 'react-quill';
@@ -7,6 +6,7 @@ import { useForm } from '@mantine/form';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { response } from 'express';
+
 interface BlogInterface{
   titlu: string;
   descriere: string;
@@ -41,6 +41,7 @@ export const DetaliiCont = () => {
         }
       }
       const userProfileURL="http://localhost:8080/user-profile"
+      
        axios.get(userProfileURL, config)
        .then(response=>{
         setUserData(response.data);
@@ -50,15 +51,26 @@ export const DetaliiCont = () => {
     },[])
 
 
-    const handleSubmit=async(values:BlogInterface)=>{
-      try{
-    const blogURL="http://localhost:8080/blog"
-    const response= await axios.post(blogURL, values);
-    console.log(response.data);
-      }catch(error){
-    console.error("Eroare in inserarea datelor in bd.")
+    const handleSubmit = async (values: BlogInterface) => {
+      try {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          console.error("token-ul lipseste");
+          return;
+        }
+        const config = {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        };
+        const blogURL = "http://localhost:8080/blog";
+        const response = await axios.post(blogURL, values, config);
+        console.log(response.data);
+        
+      } catch (error) {
+        console.error("Eroare in inserarea datelor in bd.");
       }
-    }
+    };
  
   return (
     <Center>
@@ -99,5 +111,6 @@ export const DetaliiCont = () => {
     </Center>
   )
 }
+
 
 export default DetaliiCont

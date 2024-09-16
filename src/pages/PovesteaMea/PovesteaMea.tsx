@@ -1,13 +1,14 @@
 import { HeaderMegaMenu } from '../../components/Header/HeadeMegaMenu'
 import { FooterLinks } from '../../components/Footer/FooterLinks'
-import { BlogCard } from '../../components/BlogCard/BlogCard'
+
+import { CardPage } from '../../components/Card/CardPage'
 
 
 const PovesteaMea = () => {
   return (
     <div className='my-story'>
       <HeaderMegaMenu/>
-<BlogCard/>
+      <CardPage/>
       <FooterLinks/>
     </div>
   )
