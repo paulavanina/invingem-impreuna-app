@@ -51,7 +51,7 @@ export function CommCard() {
       Ce Spun Utilizatorii Noștri?
       </Title>
 
-      <Text c="dimmed" className={classes.description} ta="center" mt="md" ml={250}>
+      <Text c="dimmed" className={classes.description} ta="center" mt="md" ml={150}>
       Citește mai jos câteva dintre experiențele împărtășite de utilizatorii noștri. Cuvintele comunității noastre reflectă sprijinul și inspirația pe care le găsim împreună.
       </Text>
 

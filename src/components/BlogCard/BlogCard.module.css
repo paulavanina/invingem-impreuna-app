@@ -1,0 +1,20 @@
+.card {
+  width: 400px;
+  height: 450px;
+  margin: auto;
+  display: flex;
+  padding: 10px;
+  background-color: var(--mantine-color-body);
+}
+.card-container {
+}
+
+.title {
+  display: block;
+  margin-top: var(--mantine-spacing-md);
+  margin-bottom: rem(5px);
+}
+
+.footer {
+  margin-top: var(--mantine-spacing-md);
+}

@@ -1,0 +1,37 @@
+.contul-meu {
+  display: flex;
+}
+.profile-container {
+  width: 400px;
+  height: 320px;
+  background-color: white;
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  border-radius: 10px;
+  margin-top: 30px;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+.nume,
+.prenume,
+.email {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.content-container {
+  width: 800px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  border-radius: 10px;
+  margin-top: 30px;
+  padding-top: 10px;
+  margin-left: 20px;
+}
+
+.editor-container {
+  padding: 20px;
+}
+.button {
+  text-align: right;
+}
