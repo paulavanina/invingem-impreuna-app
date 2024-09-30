@@ -5,17 +5,10 @@
   background-image: linear-gradient(
     to right top,
     #ffffff,
-    #f1f3f8,
-    #e0e9f1,
-    #ccdfe8,
-    #b8d6dc,
-    #acced7,
-    #a0c6d2,
-    #94becd,
-    #97b3ce,
-    #a2a6c8,
-    #b099b9,
-    #ba8da3
+    #dadfe7,
+    #afc2ce,
+    #81a7af,
+    #598c88
   );
   display: flex;
   justify-content: center;
@@ -25,7 +18,7 @@
 .form-container {
   padding-top: 2px;
   width: 400px;
-  height: 450px;
+  height: 500px;
   margin: auto;
   margin-top: auto;
   background-color: white;

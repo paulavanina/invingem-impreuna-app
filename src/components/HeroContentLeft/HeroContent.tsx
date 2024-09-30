@@ -1,7 +1,14 @@
-import { Overlay, Container, Title, Button, Text } from '@mantine/core';
-import classes from './HeroContent.module.css'
+import { Overlay, Container, Title, Button, Text } from "@mantine/core";
+import classes from "./HeroContent.module.css";
+import { useNavigate } from "react-router-dom";
 
 export function HeroContentLeft() {
+  const navigate = useNavigate();
+
+  const handleSignUp = () => {
+    navigate("/signUp");
+  };
+
   return (
     <div className={classes.hero}>
       <Overlay
@@ -10,11 +17,30 @@ export function HeroContentLeft() {
         zIndex={0}
       />
       <Container className={classes.container} size="md">
-        <Title className={classes.title}>Bine ați venit la Împreună Învingem !</Title>
-        <Text className={classes.description} size="xl" mt="xl" style={{color:'white'}}>
-        Suntem aici pentru a duce împreună oamenii care se confruntă cu cancerul, pentru a împărtăși experiențe și a oferi suport emoțional. 
+        <Title className={classes.title}>
+          Bine ați venit la Împreună Învingem !
+        </Title>
+        <Text
+          className={classes.description}
+          fz={18}
+          mt="xl"
+          style={{ color: "white" }}
+        >
+          Suntem aici pentru a aduce împreună oamenii din România care se
+          confruntă cu cancerul, pentru a împărtăși experiențe și a oferi suport
+          emoțional. Nu ești singur – suntem aici pentru tine, pentru a învinge
+          împreună!
         </Text>
-        <Button style={{ backgroundColor: '#9A5576' }} radius="xl" size="xl" className={classes.control}>Get started</Button>
+
+        <Button
+          style={{ backgroundColor: "#598c88" }}
+          radius="xl"
+          size="xl"
+          className={classes.control}
+          onClick={handleSignUp}
+        >
+          înregistrează-te
+        </Button>
       </Container>
     </div>
   );

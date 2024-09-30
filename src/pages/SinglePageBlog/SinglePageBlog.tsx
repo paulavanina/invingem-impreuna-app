@@ -1,19 +1,17 @@
+import React from "react";
 import { HeaderMegaMenu } from "../../components/Header/HeadeMegaMenu";
+import BlogSinglePage from "../../components/BlogSinglePage/BlogSinglePage";
 import { FooterLinks } from "../../components/Footer/FooterLinks";
-import { BlogCard } from "../../components/BlogCard/BlogCard";
-import DetaliiCont from "../../components/DetaliiCont/DetaliiCont";
-import { useState } from "react";
 import { FooterCentered } from "../../components/footerCentered/Footer";
 
-const ContulMeu = () => {
+const SinglePageBlog = () => {
   return (
     <div>
       <HeaderMegaMenu />
-      <DetaliiCont />
-      <BlogCard />
+      <BlogSinglePage />
       <FooterCentered />
     </div>
   );
 };
 
-export default ContulMeu;
+export default SinglePageBlog;
