@@ -7,7 +7,7 @@ import {
   Image,
   Center,
 } from "@mantine/core";
-import Logo from "../../assets/Împreună (4).png";
+import Logo from "../../assets/logo-final.png";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./HeaderMegaMenu.module.css";
 import { Link, useNavigate } from "react-router-dom";
@@ -30,7 +30,7 @@ export function HeaderMegaMenu() {
     <Box pb={0}>
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <img src={Logo} style={{ width: "150px", height: "auto" }} />
+          <img src={Logo} style={{ width: "90px", height: "auto" }} />
           <Group h="100%" gap={1} visibleFrom="sm">
             <Link to="/" className={classes.link}>
               Despre noi

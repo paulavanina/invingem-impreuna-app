@@ -103,7 +103,7 @@ export function CardPage() {
                     fz={14}
                     inline
                     mb={20}
-                    ml={40}
+                    ml={45}
                     style={{
                       position: "absolute",
                       bottom: "12px",

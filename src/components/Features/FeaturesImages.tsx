@@ -68,7 +68,7 @@ export function FeaturesImages() {
   return (
     <Container size={700} className={classes.wrapper}>
       <Group justify="center" pb={20}>
-        <Badge size="lg" color="#FFDE80">
+        <Badge size="lg" color="#F5C300">
           SPRINJIN ȘI INFORMAȚII
         </Badge>
       </Group>

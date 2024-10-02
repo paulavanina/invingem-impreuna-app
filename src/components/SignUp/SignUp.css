@@ -3,12 +3,12 @@
   height: 680px;
   margin-top: 0px;
   background-image: linear-gradient(
-    to right top,
+    to bottom,
     #ffffff,
-    #dadfe7,
-    #afc2ce,
-    #81a7af,
-    #598c88
+    #cfdced,
+    #8cbfd3,
+    #40a3a6,
+    #068466
   );
   display: flex;
   justify-content: center;

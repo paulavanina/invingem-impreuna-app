@@ -6,6 +6,8 @@
   background-size: cover;
   background-position: center;
   padding-bottom: 50px;
+  @media (max-width: $mantine-breakpoint-sm) {
+  }
 }
 
 .container {

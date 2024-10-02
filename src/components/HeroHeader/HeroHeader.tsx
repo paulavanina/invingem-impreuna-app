@@ -36,7 +36,7 @@ export function HeroBullets() {
             spacing="sm"
             size="sm"
             icon={
-              <ThemeIcon size={20} radius="xl" color="#598c88">
+              <ThemeIcon size={20} radius="xl" color="#068466">
                 <IconCheck
                   style={{ width: rem(12), height: rem(12) }}
                   stroke={1.5}

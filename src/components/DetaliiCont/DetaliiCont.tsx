@@ -84,6 +84,11 @@ export const DetaliiCont = () => {
       console.error("Eroare in inserarea datelor in bd.");
     }
   };
+  const [isLoggedin, setIsLoggedin] = useState(false);
+  const logout = () => {
+    localStorage.removeItem("token-info");
+    setIsLoggedin(false);
+  };
 
   return (
     <Center>
@@ -100,6 +105,12 @@ export const DetaliiCont = () => {
           <div className="nume">Nume: {userData.nume}</div>
           <div className="prenume">Prenume: {userData.prenume} </div>
           <div className="email">Email: {userData.email}</div>
+          <Center>
+            {" "}
+            <Button mt={60} onClickCapture={logout}>
+              Log out
+            </Button>
+          </Center>
         </div>
 
         {/* Blog: */}

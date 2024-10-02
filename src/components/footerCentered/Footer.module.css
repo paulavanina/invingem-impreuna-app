@@ -1,6 +1,6 @@
 .footer {
   margin-top: rem(120px);
-  background-color: #366c68;
+  background-color: #004d49;
   color: "#FFFF";
   border-top: rem(1px) solid
     light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));

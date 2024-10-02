@@ -33,7 +33,7 @@ export function HeroContentLeft() {
         </Text>
 
         <Button
-          style={{ backgroundColor: "#598c88" }}
+          style={{ backgroundColor: "#004d49" }}
           radius="xl"
           size="xl"
           className={classes.control}
