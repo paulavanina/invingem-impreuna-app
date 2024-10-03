@@ -11,6 +11,7 @@ import { useForm } from "@mantine/form";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { response } from "express";
+import { useNavigate } from "react-router-dom";
 
 interface BlogInterface {
   titlu: string;
@@ -84,11 +85,13 @@ export const DetaliiCont = () => {
       console.error("Eroare in inserarea datelor in bd.");
     }
   };
-  const [isLoggedin, setIsLoggedin] = useState(false);
+  const navigate = useNavigate();
   const logout = () => {
-    localStorage.removeItem("token-info");
-    setIsLoggedin(false);
+    localStorage.removeItem("token");
+    setisLoggedIn(false);
+    navigate("/login");
   };
+  const [isLoggedIn, setisLoggedIn] = useState(false);
 
   return (
     <Center>

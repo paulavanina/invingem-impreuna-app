@@ -12,7 +12,7 @@ import {
 import classes from "./SinglePageText.module.css";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-
+import back from "../../assets/back.png";
 interface Blog {
   titlu: string;
   descriere: string;
@@ -60,24 +60,7 @@ export function BlogSinglePage() {
   };
   return (
     <div>
-      <Button m={10} color="#FFF" radius={20} onClick={handleBackButton}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="#597e8d"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M9 14l-4 -4l4 -4" />
-          <path d="M5 10h11a4 4 0 1 1 0 8h-1" />
-        </svg>
-      </Button>
-      <Container className={classes.wrapper} size={1400}>
+      <Container className={classes.wrapper} size={1400} mt={20}>
         <Group justify="space-between">
           <Center p={10}>
             <Avatar
@@ -105,6 +88,17 @@ export function BlogSinglePage() {
             {blog.descriere}
           </Text>
         </Container>
+        <div style={{ display: "grid", justifyContent: "end" }}>
+          <Button
+            color="#FFF"
+            radius="xl"
+            mb={10}
+            style={{ width: 40, height: 40, padding: 0 }}
+            onClick={handleBackButton}
+          >
+            <Image src={back} width={40} height={40} />
+          </Button>
+        </div>
       </Container>
     </div>
   );

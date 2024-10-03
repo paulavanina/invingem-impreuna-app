@@ -8,10 +8,10 @@ import {
   SimpleGrid,
 } from "@mantine/core";
 import classes from "./FeaturesImages.module.css";
-import bookIcon from "../../assets/books-icon.png";
-import heartIcon from "../../assets/heart-icon.png";
-import messageIcon from "../../assets/message-icon.png";
-import webinareIcon from "../../assets/webinar-icon.png";
+import bookIcon from "../../assets/book.png";
+import heartIcon from "../../assets/heart.png";
+import messageIcon from "../../assets/message.png";
+import webinareIcon from "../../assets/friends.png";
 const data = [
   {
     id: 1,
@@ -48,7 +48,7 @@ export function FeaturesImages() {
   const items = data.map((item) => (
     <div className={classes.item} key={item.id}>
       <ThemeIcon
-        style={{ backgroundColor: "white" }}
+        style={{ backgroundColor: "#e6fdf3" }}
         className={classes.itemIcon}
         size={60}
         radius="md"
