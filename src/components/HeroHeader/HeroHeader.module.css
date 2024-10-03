@@ -11,33 +11,32 @@
 
   @media (max-width: $mantine-breakpoint-md) {
     max-width: 100%;
-    margin-right: 0;
   }
 }
 
 .title {
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-size: rem(44px);
-  line-height: 1.2;
-  font-weight: 900;
 
   @media (max-width: $mantine-breakpoint-xs) {
     font-size: rem(28px);
   }
 }
-
 .control {
   @media (max-width: $mantine-breakpoint-xs) {
     flex: 1;
   }
 }
-
 .image {
   width: rem(300px);
   height: rem(450px);
+  transition: transform 0.3s ease-in-out;
   @media (max-width: $mantine-breakpoint-md) {
     display: none;
   }
+}
+.image:hover {
+  transform: scale(1.1);
 }
 
 .highlight {

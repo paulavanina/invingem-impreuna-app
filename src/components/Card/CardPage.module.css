@@ -1,15 +1,23 @@
 .card {
   width: 400px;
   height: 450px;
-  margin-top: 40px;
   margin-left: 20px;
   position: relative;
   background-color: var(--mantine-color-body);
+  transition: transform 0.3s ease-in-out;
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin: 15px;
+  }
 }
-
+.card:hover {
+  transform: scale(1.1);
+}
+.card-container {
+  margin: auto;
+  background-color: gray;
+}
 .rating {
   position: absolute;
-  top: var(--mantine-spacing-xs);
   right: rem(12px);
   pointer-events: none;
 }
@@ -22,4 +30,9 @@
 
 .footer {
   margin-top: var(--mantine-spacing-md);
+}
+.button {
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: auto;
+  }
 }
